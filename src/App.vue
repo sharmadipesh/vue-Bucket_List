@@ -1,28 +1,55 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <Header />
+        <router-view/>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    import Header from './components/layout/Header';
+
+    export default {
+        components :{
+            Header
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ *{
+        margin: 0;
+        padding: 0;
+    }
+
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+
+        /* temparary style */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav a {
+        font-weight: 900;
+        color: #2c3e50;
+        text-decoration: none;
+        font-style: italic;
+    }
+
+    #nav a.router-link-exact-active {
+        color: #42b983;
+    }
+
+    .card-style{
+        box-shadow: 0 0 10px 10px rgba(0,0,0,0.12);
+        padding:10px 20px;
+        border-radius: 10px;
+        width: 28vw;
+        margin-bottom: 20px;
+    }
 </style>
