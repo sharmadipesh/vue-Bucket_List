@@ -1,3 +1,5 @@
+![demo](bucket-list.png)
+
 # learning-vue
 
 ## Project setup
